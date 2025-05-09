@@ -1,19 +1,28 @@
 # Emscripten Demo
 
-## 首次使用
+## Usage
 
-安装依赖和初始化配置：
+Prepare dependencies and configuration files:
 
 ```bash
 $ make init
-$ cp ./.env.example ./.env
-$ vim ./.env  # 配置 Sentry 环境变量
+$ cp .env.example .env
+$ cp .sentryclirc.example .sentryclirc
+$ vim .env  # Set sentry DSN
+$ vim .sentryclirc  # Set sentry org, project and auth token
 ```
 
-构建并上传 sourcemap：
+Build and upload sourcemaps and debug files to sentry:
 
 ```bash
 $ make build upload
 ```
 
-在浏览器中打开网页：http://localhost:3000
+Open `http://localhost:3000` in browser, and it'll send an event to sentry.
+
+## References
+
+- [Chrome Blog - Faster Wasm Debugging](https://developer.chrome.com/blog/faster-wasm-debugging)
+- [Emscripten - Call C++ Code from Javascript](https://emscripten.org/docs/porting/connecting_cpp_and_javascript/embind.html)
+- [Emscripten - C++ Exception Support](https://emscripten.org/docs/porting/exceptions.html)
+- [VSCode - Debugging WebAssembly](https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_debugging-webassembly)

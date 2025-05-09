@@ -1,0 +1,6 @@
+[defaults]
+org=your-org
+project=your-project
+
+[auth]
+token=your-org-auth-token

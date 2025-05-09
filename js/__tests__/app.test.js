@@ -18,10 +18,10 @@ describe('Wasm Module Tests', () => {
     it('should throw an error when dividing by zero', () => {
       try {
         moduleInstance.divide(1, 0);
-        // 如果没有抛出错误，则测试失败
+        // Fail the test if no error is thrown
         expect(true).toBe(false);
       } catch (e) {
-        // e.message 是 ['类型', '消息'] 结构 https://emscripten.org/docs/porting/exceptions.html
+        // e.message is an array of [type, message] https://emscripten.org/docs/porting/exceptions.html
         expect(e.message[0]).toMatch(/runtime_error/i);
         expect(e.message[1]).toMatch(/divide by zero/i);
       }

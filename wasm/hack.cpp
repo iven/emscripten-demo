@@ -1,3 +1,5 @@
+// This file is only a hack for my patched emscripten. You can safely remove it
+// when compiling.
 #include <cstdint>
 
 extern "C" {

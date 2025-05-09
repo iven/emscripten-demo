@@ -1,5 +1,6 @@
 /.cache/
 /.env
+/.sentryclirc
 /.venv/
 /build/
 /dist/
