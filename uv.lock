@@ -1,0 +1,36 @@
+version = 1
+revision = 1
+requires-python = ">=3.13"
+
+[[package]]
+name = "emscripten"
+version = "0.1.0"
+source = { virtual = "." }
+
+[package.dev-dependencies]
+dev = [
+    { name = "sentry-cli" },
+]
+
+[package.metadata]
+
+[package.metadata.requires-dev]
+dev = [{ name = "sentry-cli", specifier = ">=2.44.0" }]
+
+[[package]]
+name = "sentry-cli"
+version = "2.44.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/1c/93/8a5b5b7a77f0a74c18d7fdf97984252367695283b4c4cb90a0bb19b30f29/sentry_cli-2.44.0.tar.gz", hash = "sha256:13a24db4eeea4457f006a0fa67891feb110c38850ad1daad5e4a1e0dc6123a96", size = 209797 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/5f/7a/99f28ebc5f07a1d1fc413fc6dd0d559fddb99a47ce5f4cdb5d850d767ad0/sentry_cli-2.44.0-py3-none-macosx_10_15_x86_64.whl", hash = "sha256:350917d8d7cf931e5a77c2000b35be65b2f23470efbf15225cbf523c42acd7fd", size = 13009676 },
+    { url = "https://files.pythonhosted.org/packages/19/06/6db08968b1b222d8ab3db1209930af4f13ff678952a34e6149057468293a/sentry_cli-2.44.0-py3-none-macosx_11_0_arm64.whl", hash = "sha256:fe2826faa6124e60c9e83afe10180ba80f3ca5716929353b5466d7a1f202d8fe", size = 11673690 },
+    { url = "https://files.pythonhosted.org/packages/89/0b/90f09b4845bbfce5816c8fb6b3915b12b91291f51c3205538615bf914c8e/sentry_cli-2.44.0-py3-none-macosx_11_0_universal2.whl", hash = "sha256:699198abe00677bdf2b2c7a55a82f5402ff402600081b62f9eb89f946f4bbc00", size = 24698975 },
+    { url = "https://files.pythonhosted.org/packages/10/58/64c461518d42caf1c4d43c5f2f90e5d555babe5c8617e443287725f310fe/sentry_cli-2.44.0-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.musllinux_1_2_aarch64.whl", hash = "sha256:b0713fea884362c2ced1c1523e6edc39f47d1a132654c4ad39d00e1dcdef93bb", size = 17492567 },
+    { url = "https://files.pythonhosted.org/packages/d9/4e/c6257f39b532634af95909e0b7abbc05b4838b4f86f43f45183da3d102b3/sentry_cli-2.44.0-py3-none-manylinux_2_17_armv7l.manylinux2014_armv7l.musllinux_1_2_armv7l.whl", hash = "sha256:aa742278d12b508a815aefbf129345d892bcb4c9af068b166ce1c0fec1b9be25", size = 15940220 },
+    { url = "https://files.pythonhosted.org/packages/62/fe/b037a0230a50fc99f47b727f50f1f73b680d3cf145201e0ce14252ad5297/sentry_cli-2.44.0-py3-none-manylinux_2_17_i686.manylinux2014_i686.musllinux_1_2_i686.whl", hash = "sha256:335c52f7cafaf17db77ed2b4e2587425bf3795501a38e91d76f5df9310e51afc", size = 17002102 },
+    { url = "https://files.pythonhosted.org/packages/8e/fd/e845f708ea820cb97b365229ba51d10fb5b736c8b58e0d579e8107509147/sentry_cli-2.44.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.musllinux_1_2_x86_64.whl", hash = "sha256:30b571450456f80f9de39b1136c7051c5bee28f303963083956b3a195df56a0f", size = 19457876 },
+    { url = "https://files.pythonhosted.org/packages/5b/66/f789bde2fb87a84bc42fd03d4a6a8b2dd60a967cc59bb6f5aac7806c2ae2/sentry_cli-2.44.0-py3-none-win32.whl", hash = "sha256:dbecde0b2576aa7f948f087a9d412b14a9b6c6d77beb5dff8a052870eb45c759", size = 10230842 },
+    { url = "https://files.pythonhosted.org/packages/04/9c/a061ac1cd25f7ee96539055d82eefba4445dd80c9971bc5bb0b8c0081bcd/sentry_cli-2.44.0-py3-none-win_amd64.whl", hash = "sha256:f005e2931e52411ff427b4e0da7f11d2a4bbdefc49b10aeabfdcb358c6896d63", size = 11579454 },
+    { url = "https://files.pythonhosted.org/packages/50/40/a16e31d09ce46120b059a411d72707a9e235314faad8ed6a8661d401011b/sentry_cli-2.44.0-py3-none-win_arm64.whl", hash = "sha256:8dd03b5478da932a534f6fe4af78347e4c6b9820a6366b9b377d15f2831527c2", size = 9984061 },
+]

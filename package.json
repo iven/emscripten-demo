@@ -1,0 +1,20 @@
+{
+  "name": "emscripten",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sentry/browser": "^9.16.1",
+    "@sentry/wasm": "^9.16.1"
+  },
+  "devDependencies": {
+    "dot-env": "^0.0.1",
+    "vite": "^6.3.5"
+  }
+}
