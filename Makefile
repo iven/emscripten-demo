@@ -1,6 +1,6 @@
 .PHONY: init build
 
-UNAME := $(shell uname)
+SHELL = /bin/bash
 
 init:
 	@pnpm install
@@ -11,7 +11,10 @@ dev:
 
 build:
 	@mkdir -p dist js/wasm
-	@emcc -fwasm-exceptions -sEXCEPTION_STACK_TRACES=1 -sMODULARIZE=1 -sASSERTIONS -sEXPORT_ES6=1 --no-entry -std=c++23 -lembind -g -O3 -Wno-limited-postlink-optimizations -o js/wasm/demo.js wasm/demo.cpp wasm/hack.cpp
+	@cmake --preset emscripten-release
+	@cmake --build --preset emscripten-release
+	@cp build/demo.js js/wasm/demo.js
+	@cp build/demo.wasm js/wasm/demo.wasm
 	@pnpm build
 	@uv run sentry-cli sourcemaps inject dist/assets/
 

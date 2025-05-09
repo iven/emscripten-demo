@@ -1,5 +1,7 @@
+/.cache/
 /.env
 /.venv/
+/build/
 /dist/
 /js/wasm/
 /node_modules/
