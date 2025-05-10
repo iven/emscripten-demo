@@ -14,7 +14,8 @@ build:
 	@cmake --preset emscripten-release
 	@cmake --build --preset emscripten-release
 	@wasm-split -q --strip --strip-names build/demo.wasm -o js/wasm/demo.wasm -d build/demo.debug.wasm --external-dwarf-url=demo.debug.wasm
-	@cp build/demo.js js/wasm/demo.js
+	@cp build/demo.js js/wasm/
+	@cp build/demo.debug.wasm js/wasm/
 	@pnpm build
 	@uv run sentry-cli sourcemaps inject dist/assets/
 	@cp build/demo.debug.wasm dist/assets/
@@ -22,3 +23,6 @@ build:
 upload:
 	@uv run sentry-cli sourcemaps upload dist/assets/
 	@uv run sentry-cli debug-files upload --include-sources build/demo.debug.wasm --wait
+
+preview:
+	@pnpm preview

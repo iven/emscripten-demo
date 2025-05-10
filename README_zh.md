@@ -5,10 +5,11 @@
 ## 特性
 
 * **最小化项目配置**：使用 CMake 进行 C++ 构建，Vite 进行前端打包，Vitest 进行测试。
+* **优化 Wasm**：在编译时使用 `wasm-split` 去除 Wasm 模块中的调试信息，避免在生产环境中泄露敏感信息。
+* **Sentry 集成**：捕获 C++ 异常并将其发送到 Sentry，能够完整展示 JavaScript 和 C++ 的错误堆栈（利用 sourcemap 和调试文件）。
 * **IDE 集成**：为 VSCode 等编辑器配置了 `clangd` 集成，支持 C++ 代码的函数跳转、自动补全等功能。
 * **VSCode 调试**：支持在 VSCode 中对 C++ 代码进行断点调试，例如在运行 Vitest 测试时。
-* **Sentry 集成**：捕获 C++ 异常并将其发送到 Sentry，能够完整展示 JavaScript 和 C++ 的错误堆栈（利用 sourcemap 和调试文件）。
-* **优化 Wasm**：在编译时使用 `wasm-split` 去除 Wasm 模块中的调试信息，避免在生产环境中泄露敏感信息。
+* **Chrome DevTools 调试**：支持在 Chrome 中使用 C/C++ DevTools Support (DWARF) 扩展程序对 C++ 文件进行调试。
 
 ## 使用方法
 
@@ -30,6 +31,26 @@ $ vim .sentryclirc  # 设置 Sentry org, project, 和 auth token
 ```bash
 $ make build upload
 ```
+
+启动开发服务器：
+
+```bash
+$ make dev
+```
+
+或者启动预览服务器：
+
+```bash
+$ make preview
+```
+
+如果在使用 SSH 远程开发时，需要在 Chrome 中调试 C++ 程序，你还需要：
+
+1. 将源代码目录 host 到 3001 端口。例如：
+   ```bash
+   $ python3 -m http.server 3001
+   ```
+2. 在 C/C++ DevTools Support (DWARF) 扩展程序的设置中，将 `/path/to/your/code` （运行 `python3 -m http.server 3001` 命令的机器上源代码的绝对路径）映射到 `http://localhost:3000/debug-src/`。
 
 在浏览器中打开 `http://localhost:3000`。如果发生错误（例如除以零），将会向 Sentry 发送一个事件。
 

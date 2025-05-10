@@ -7,7 +7,7 @@ set(CMAKE_CXX_COMPILER_WORKS TRUE)
 
 add_executable(demo wasm/demo.cpp wasm/hack.cpp)
 
-# 修复 clangd 不生效： https://github.com/clangd/clangd/issues/1621#issuecomment-1703330511
+# Fix Clangd compilation database： https://github.com/clangd/clangd/issues/1621#issuecomment-1703330511
 execute_process(
     COMMAND em++ -fwasm-exceptions --cflags
     OUTPUT_VARIABLE EM_CFLAGS
