@@ -17,12 +17,15 @@ This project demonstrates a minimal setup for an Emscripten-based WebAssembly (W
 Prepare dependencies and configuration files:
 
 ```bash
+$ direnv allow .
 $ make init
 $ cp .env.example .env
 $ cp .sentryclirc.example .sentryclirc
 $ vim .env  # Set Sentry DSN
 $ vim .sentryclirc  # Set Sentry org, project, and auth token
 ```
+
+Install wasm-split: https://github.com/getsentry/symbolicator/releases/.
 
 Build the project, and upload sourcemaps and debug files to Sentry:
 

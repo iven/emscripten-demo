@@ -15,12 +15,15 @@
 准备依赖和配置文件：
 
 ```bash
+$ direnv allow .
 $ make init
 $ cp .env.example .env
 $ cp .sentryclirc.example .sentryclirc
 $ vim .env  # 设置 Sentry DSN
 $ vim .sentryclirc  # 设置 Sentry org, project, 和 auth token
 ```
+
+安装 wasm-split: https://github.com/getsentry/symbolicator/releases/
 
 构建项目，并上传 sourcemap 和调试文件到 Sentry：
 

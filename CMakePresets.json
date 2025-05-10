@@ -19,7 +19,7 @@
       "cacheVariables": {
         "CMAKE_TOOLCHAIN_FILE": {
           "type": "FILEPATH",
-          "value": "$env{EMSDK}/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake"
+          "value": "$env{EMSCRIPTEN_ROOT}/cmake/Modules/Platform/Emscripten.cmake"
         },
         "CMAKE_BUILD_TYPE": "Release",
         "CMAKE_CXX_FLAGS": "-O3 -g -fwasm-exceptions -Wall -Werror -Wno-limited-postlink-optimizations",
