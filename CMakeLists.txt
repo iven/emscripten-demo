@@ -19,9 +19,10 @@ target_link_options(
     demo
     PRIVATE
         -lembind
-        -sMODULARIZE=1
-        -sASSERTIONS=1
-        -sEXPORT_ES6=1
-        -sEXCEPTION_STACK_TRACES=1
+        -sWASM_BIGINT
+        -sMODULARIZE
+        -sASSERTIONS
+        -sEXPORT_ES6
+        -sEXCEPTION_STACK_TRACES
         --no-entry
 )

@@ -10,13 +10,14 @@ dev:
 	@pnpm dev
 
 build:
-	@mkdir -p dist js/wasm
+	@mkdir -p dist/ js/wasm/
 	@cmake --preset emscripten-release
 	@cmake --build --preset emscripten-release
+	@wasm-split -q --strip --strip-names build/demo.wasm -o js/wasm/demo.wasm -d build/demo.debug.wasm --external-dwarf-url=demo.debug.wasm
 	@cp build/demo.js js/wasm/demo.js
-	@wasm-split -q --strip --strip-names build/demo.wasm -o js/wasm/demo.wasm -d build/demo.debug.wasm
 	@pnpm build
 	@uv run sentry-cli sourcemaps inject dist/assets/
+	@cp build/demo.debug.wasm dist/assets/
 
 upload:
 	@uv run sentry-cli sourcemaps upload dist/assets/
