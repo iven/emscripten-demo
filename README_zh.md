@@ -4,11 +4,11 @@
 
 ## 特性
 
-*   **最小化项目配置**：使用 CMake 进行 C++ 构建，Vite 进行前端打包，Vitest 进行测试。
-*   **IDE 集成**：为 VSCode 等编辑器配置了 `clangd` 集成，支持 C++ 代码的函数跳转、自动补全等功能。
-*   **VSCode 调试**：支持在 VSCode 中对 C++ 代码进行断点调试，例如在运行 Vitest 测试时。
-*   **Sentry 集成**：捕获 C++ 异常并将其发送到 Sentry，能够完整展示 JavaScript 和 C++ 的错误堆栈（利用 sourcemap 和调试文件）。
-*   **优化 Wasm**：在编译时使用 `wasm-split` 去除 Wasm 模块中的调试信息，避免在生产环境中泄露敏感信息。
+* **最小化项目配置**：使用 CMake 进行 C++ 构建，Vite 进行前端打包，Vitest 进行测试。
+* **IDE 集成**：为 VSCode 等编辑器配置了 `clangd` 集成，支持 C++ 代码的函数跳转、自动补全等功能。
+* **VSCode 调试**：支持在 VSCode 中对 C++ 代码进行断点调试，例如在运行 Vitest 测试时。
+* **Sentry 集成**：捕获 C++ 异常并将其发送到 Sentry，能够完整展示 JavaScript 和 C++ 的错误堆栈（利用 sourcemap 和调试文件）。
+* **优化 Wasm**：在编译时使用 `wasm-split` 去除 Wasm 模块中的调试信息，避免在生产环境中泄露敏感信息。
 
 ## 使用方法
 

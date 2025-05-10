@@ -6,11 +6,11 @@ This project demonstrates a minimal setup for an Emscripten-based WebAssembly (W
 
 ## Features
 
-*   **Minimal Project Setup**: Uses CMake for C++ build, Vite for frontend bundling, and Vitest for testing.
-*   **IDE Integration**: Configured for `clangd` integration in editors like VSCode, enabling features like code navigation and auto-completion for C++ code.
-*   **VSCode Debugging**: Supports debugging C++ code with breakpoints in VSCode, for instance, when running Vitest tests.
-*   **Sentry Integration**: Captures C++ exceptions and sends them to Sentry with full JavaScript and C++ stack traces (utilizing sourcemaps and debug files).
-*   **Optimized Wasm**: Uses `wasm-split` to strip debug information from the Wasm module at build time, preventing sensitive information leakage in production.
+* **Minimal Project Setup**: Uses CMake for C++ build, Vite for frontend bundling, and Vitest for testing.
+* **IDE Integration**: Configured for `clangd` integration in editors like VSCode, enabling features like code navigation and auto-completion for C++ code.
+* **VSCode Debugging**: Supports debugging C++ code with breakpoints in VSCode, for instance, when running Vitest tests.
+* **Sentry Integration**: Captures C++ exceptions and sends them to Sentry with full JavaScript and C++ stack traces (utilizing sourcemaps and debug files).
+* **Optimized Wasm**: Uses `wasm-split` to strip debug information from the Wasm module at build time, preventing sensitive information leakage in production.
 
 ## Usage
 
