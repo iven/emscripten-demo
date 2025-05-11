@@ -13,9 +13,11 @@ build:
 	@mkdir -p dist/ js/wasm/
 	@cmake --preset emscripten-release
 	@cmake --build --preset emscripten-release
+	# For vite dev server
 	@wasm-split -q --strip --strip-names build/demo.wasm -o js/wasm/demo.wasm -d build/demo.debug.wasm --external-dwarf-url=demo.debug.wasm
 	@cp build/demo.js js/wasm/
 	@cp build/demo.debug.wasm js/wasm/
+	# For vite preview server and production
 	@pnpm build
 	@uv run sentry-cli sourcemaps inject dist/assets/
 	@cp build/demo.debug.wasm dist/assets/
